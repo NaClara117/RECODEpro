@@ -1,9 +1,14 @@
+// Algoritmo "Exercicio 01"
+// Disciplina: Computacao e Logica de Programacao
+// Professor: Flávio Mota da Cruz
+// Autor(a): Ana Clara Alves
+// Data: 28/06/2023
 programa 
 {
-  inclua biblioteca Util
-  inclua biblioteca Matematica
-  funcao inicio() 
-  {
+   inclua biblioteca Util
+   inclua biblioteca Matematica
+   funcao inicio() 
+   {
       real nota1, nota2, nota_final
       escreva("Qual a nota do 1º semestre? ")
       leia(nota1)
@@ -19,5 +24,5 @@ programa
       {
          escreva ("O aluno está REPROVADO")
       }
-  }
+   }
 }
