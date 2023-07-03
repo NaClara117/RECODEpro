@@ -1,23 +1,29 @@
-Algoritmo "Atividade 4"
-    // Disciplina: Computacao e Logica de Programacao
-    // Professor: Flávio Mota da Cruz
-    // Autor(a): Ana Clara Alves
-    // Data: 30/06/2023
-Var
-    // Declaracoes das variaveis
-    valor, desconto: real
+// Exercício 4
+// Disciplina: Computacao e Logica de Programacao
+// Professor: Flávio Mota da Cruz
+// Autor(a): Ana Clara Alves
+// Data: 30/06/2023
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
 
-Inicio
-    // Comandos, procedimento, funcoes, operadores, etc...
-    escreval("Qual o valor do produto?")
-    leia(valor)
-    desconto<-0.15
-    valor<-valor*(1-desconto)
-    se (valor >= 500) entao
-        escreval("O produto custará R$", valor, " com o desconto de 15%.")
-        escreval("O produto está CARO")
-    senao
-        escreval("O produto custará R$", valor, " com o desconto de 15%.")
-        escreval("O produto está BARATO")
-    fimse
-Fimalgoritmo
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    float valor, desconto;
+    printf("Qual o valor do produto? ");
+    scanf("%f", &valor);
+    desconto=0.15;
+    valor=valor*(1-desconto);
+    if (valor >= 500)
+    {
+        printf("O produto custara R$%f com o desconto de 15%%.", valor);
+        printf("\nO produto esta CARO");
+    }
+    else
+    {
+        printf("O produto custara R$%f com o desconto de 15%%.", valor);
+        printf("\nO produto esta BARATO");
+    }
+}

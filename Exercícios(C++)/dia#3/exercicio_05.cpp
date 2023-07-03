@@ -1,30 +1,32 @@
-Algoritmo "Atividade 5"
-    // Disciplina: Computacao e Logica de Programacao
-    // Professor: Flávio Mota da Cruz
-    // Autor(a): Ana Clara Alves
-    // Data: 30/06/2023
-Var
-    // Declaracoes das variaveis
-    investimento: inteiro
-    valor, rendimento: real
+// Exercício 5
+// Disciplina: Computacao e Logica de Programacao
+// Professor: Flávio Mota da Cruz
+// Autor(a): Ana Clara Alves
+// Data: 30/06/2023
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
 
-Inicio
-    // Comandos, procedimento, funcoes, operadores, etc...
-    escreval("Qual o valor que deseja investir?")
-    leia(valor)
-    escreval("Qual o investimento que deseja fazer?")
-    escreval("1. Poupança com 5% de rendimento")
-    escreval("2. Renda Fixa com 10% de rendimento")
-    leia(investimento)
-    se (investimento = 1) entao
-    rendimento<- valor*(1+0.05)
-        escreval("O dinheiro renderá 05% anualmente, com ", rendimento, " no primeiro ano.")
-    senao
-        se (investimento = 2) entao
-        rendimento<- valor*(1+0.1)
-        escreval("O dinheiro renderá 10% anualmente, com ", rendimento, " no primeiro ano.")
-        senao
-        escreval("SELEÇÃO INVÁLIDA, TENTE NOVAMENTE")
-        fimse
-    fimse
-Fimalgoritmo
+int main()
+{
+    float valor, rendimento, investimento;
+
+    printf("Qual o valor que deseja investir? ");
+    scanf("%f",&valor);
+    printf("Qual o investimento que deseja fazer? \n");
+    printf("1. Poupanca com 5%% de rendimento\n");
+    printf("2. Renda Fixa com 10%% de rendimento\n");
+    scanf("%f",&investimento);
+    if (investimento == 1)
+    {
+        rendimento = valor*(1.05);
+        printf("O dinheiro rendera 05%% anualmente, com %f no primeiro ano.", rendimento);
+    }
+    else if (investimento == 2)
+    {
+        rendimento = valor*(1.1);
+        printf("O dinheiro rendera 10%% anualmente, com %f no primeiro ano.", rendimento);
+    }
+
+}
