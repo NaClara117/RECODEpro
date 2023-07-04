@@ -21,4 +21,3 @@ programa
     escreva("A soma é ", soma )
   }
 }
-

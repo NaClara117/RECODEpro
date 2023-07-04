@@ -4,8 +4,6 @@
 // Autor(a): Ana Clara Alves
 // Data: 03/07/2023
 programa{
-  inclua biblioteca Util
-  inclua biblioteca Matematica
   funcao inicio()
   {
     real nota, media, soma = 0.0
