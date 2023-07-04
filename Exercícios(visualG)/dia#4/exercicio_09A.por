@@ -3,7 +3,8 @@
 // Professor: Flávio Mota da Cruz
 // Autor(a): Ana Clara Alves
 // Data: 03/07/2023
-programa{
+programa
+{
   funcao inicio()
   {
     real nota, media, soma = 0.0
