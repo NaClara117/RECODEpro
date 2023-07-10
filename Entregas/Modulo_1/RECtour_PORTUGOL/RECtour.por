@@ -1,20 +1,19 @@
 programa
 {
-	//MENU
-	inteiro op=0, op2=0
-	//CLIENTES - CADASTRO E CONSUTA
-	inteiro i_cadCLI=0, i_cadDES=0
-	cadeia nome[4], cpf[4], telefone[4], email[4], endereco[4]
-	cadeia o_cidade[4], o_estado[4], d_cidade[4], d_estado[4]
-	
+	inteiro op=0 //CONTADOR SELECAO 
+	inteiro op2=0 // CONTADOR SELECAO 2
+	//CLIENTES - CADASTRO E CONSULTA 
+	inteiro i_cadCLI=0 //GLOBAL PARA NÃO SER REINICALIZADO
+	cadeia nome[10], cpf[10], telefone[10], email[10], endereco[10] //FORMULARIO CLIENTES
+	//VIAGENS - CADASTRO E CONSULTA
+	inteiro i_cadDES=0 //GLOBAL PARA NÃO SER REINICALIZADO
+	cadeia o_cidade[10], o_estado[10], d_cidade[10], d_estado[10] //FORMULARIO VIAGENS
 	funcao inicio()
 	{
-		escreva("\n")
-		menu()
-		
-		escreva("\n\n\n\n\n")
+		menu() // INICIALIZACAO DO PROGRAMA
+		escreva("\n\n\n")
 	}
-	funcao inteiro menu()
+	funcao inteiro menu() //MENU (SELEÇÃO EXTERNA)
 	{
 		limpa()
 		escreva("##################################################")
@@ -41,53 +40,53 @@ programa
 		selecao()
 		retorne op
 	}
-	funcao inteiro selecao()
+	funcao inteiro selecao() //SELECAO EXTERNA DO MENU, COM CONTADOR ACOPLADO
 	{
 		limpa()
-		escolha(op)
+		escolha(op) //OPCAO SELECIONADA
 		{
-			caso 1:
+			caso 1: //CADASTRO DE CLIENTES
 			{
-				se(i_cadCLI<2)
+				se(i_cadCLI<10)
 				{
 					c_cliente()	
 				}
-				senao
+				senao //EXCEDENTE DE CADASTROS
 				{
 					escreva("EXCEDE O NUMERO DE CLIENTES")	
 				}	
 				pare
 			}
-			caso 2:
+			caso 2: //CADASTRO DE VIAGEM
 			{
-				se(i_cadDES<2)
+				se(i_cadDES<10)
 				{
 					c_destino()	
 				}
-				senao
+				senao //EXCEDENTE DE CADASTROS
 				{
 					escreva("EXCEDE O NUMERO DE VIAGENS")	
 				}	
 				pare
 			}
-			caso 3:
+			caso 3: //PROCURADOR DE CADASTRO DE CLIENTE
 			{
 				f_client()	
 
 				pare
 			}
-			caso 4:
+			caso 4: //PROCURADOR DE CADASTRO DE VIAGEM
 			{
 				f_destino()	
 
 				pare
 			}
-			caso 0:
+			caso 0: //SAIR
 			{
 				sair()
 				pare	
 			}
-			caso contrario:
+			caso contrario: //MENSAGEM DE ERRO
 			{
 				
 				escreva("##################################################")
@@ -96,16 +95,15 @@ programa
 				escreva("\n\n")
 				
 				menu()	
-
 				pare
 			}
 		}	
 		retorne i_cadCLI	
 	}
-	funcao inteiro c_cliente()
+	funcao inteiro c_cliente() //CADASTRO DOS CLIENTES
 	{	
 		limpa()
-		enquanto(i_cadCLI<2)
+		enquanto(i_cadCLI<10) //CADASTRO DE CLIENTES COM CONTADOR
 		{
 			
 			escreva("##################################################")
@@ -113,122 +111,123 @@ programa
 			escreva("               CADASTRO DE CLIENTE                ")
 			escreva("\n\n")
 			escreva("     Nome: ")
-			leia(nome[i_cadCLI])
+			leia(nome[i_cadCLI]) // NOME DO CLIENTE
 			escreva("     CPF: ")
-			leia(cpf[i_cadCLI])
+			leia(cpf[i_cadCLI]) // CPF DO CLIENTE
 			escreva("     Celular: ")
-			leia(telefone[i_cadCLI])
+			leia(telefone[i_cadCLI]) //TELEFONE DO CLIENTE
 			escreva("     Email: ")
-			leia(email[i_cadCLI])
+			leia(email[i_cadCLI]) //EMAIL DO CLEINTE
 			escreva("\n\n")
 			i_cadCLI++
-			selecao2()
+			selecao2() //SELECAO EXTERNA MENU/SAIR
 			retorne i_cadCLI	
 		}
 		retorne i_cadCLI
 	}
-	funcao inteiro c_destino()
+	funcao inteiro c_destino() //CADASTRO DA VIAGEM
 	{	
 		limpa()
-		enquanto(i_cadDES<2)
+		enquanto(i_cadDES<10)
 		{
 			
 			escreva("##################################################")
 			escreva("\n\n")
 			escreva("                CADASTRO DE VIAGEM                ")
 			escreva("\n\n")
-			escreva("ORIGEM")
+			escreva("ORIGEM") // ORIGEM DA VIAGEM
 			escreva("\n")
 			escreva("  Cidade: ")
-			leia(o_cidade[i_cadDES])
+			leia(o_cidade[i_cadDES]) //CIDADE DE ORIGEM
 			escreva("  Estado(UF): ")
-			leia(o_estado[i_cadDES])
-			escreva("DESTINO")
+			leia(o_estado[i_cadDES]) // UF DE ORIGEM
+			escreva("\n")
+			escreva("DESTINO") // DESTINO DA VIAGEM
 			escreva("\n")
 			escreva("  Cidade: ")
-			leia(d_cidade[i_cadDES])
+			leia(d_cidade[i_cadDES]) // CIDADE DE DESTINO
 			escreva("  Estado(UF): ")
-			leia(d_estado[i_cadDES])
+			leia(d_estado[i_cadDES]) // UF DE DESTINO
 			escreva("\n\n")
 			i_cadDES++
 			escreva("\n\n")
 			escreva("##################################################")
-			selecao2()
+			selecao2() //SELECAO EXTERNA MENU/SAIR
 			retorne i_cadDES
 		}
 		retorne i_cadDES
 	}
-	funcao f_client()
+	funcao f_client() //PROCURADOR DE CADASTRO DE CLIENTE
 	{
 		limpa()
-		inteiro i_finCLI
-		cadeia f_nome
-		logico finder=falso
+		inteiro i_finCLI //CONTADOR DO PROCURADOR DO CLIENTE
+		cadeia f_nome // NOME DO CLIENTE PROCURADO
+		logico finder=falso //FINDER LOGICO PARA ENCONTRAR O CADASTRO
 		escreva("##################################################")
 		escreva("\n\n")
 		escreva("Cliente procurado: ")
 		leia(f_nome)
 		escreva("\n")
 		i_finCLI=i_cadCLI
-		para(i_finCLI=0; i_finCLI<2; i_finCLI++)
+		para(i_finCLI=0; i_finCLI<10; i_finCLI++)
 		{
 		 	se(nome[i_finCLI]==f_nome)
 			{
-				escreva("Cliente: ", nome[i_finCLI])
+				escreva("Cliente: ", nome[i_finCLI]) //NOME DO CLIENTE PROCURADO
 				escreva("\n")
-				escreva("   CPF: ", cpf[i_finCLI])
+				escreva("   CPF: ", cpf[i_finCLI]) //CPF
 				escreva("\n")
-				escreva("   Telefone: ", telefone[i_finCLI])
+				escreva("   Telefone: ", telefone[i_finCLI]) //CELULAR
 				escreva("\n")
-				escreva("   Email: ", email[i_finCLI])
+				escreva("   Email: ", email[i_finCLI]) //EMAIL
 				escreva("\n\n")
-				escreva("   Esse e nosso ", i_finCLI+1, "o cliente")
+				escreva("   Esse e nosso ", i_finCLI+1, "o cliente") //NUMERO DO CLIENTE
 				finder = verdadeiro
 				escreva("\n\n")
 				escreva("##################################################")
-				selecao2()
+				selecao2()//SELECAO EXTERNA MENU/SAIR
 			}
 		}
 		se(finder==falso)
 		{
-			escreva("CLIENTE NAO CADASTRADO")
+			escreva("CLIENTE NAO CADASTRADO")//MENSAGEM DE ERRO CLIENTE INEXISTENTE
 			escreva("\n\n")
 			escreva("##################################################")
-			selecao2()
+			selecao2()//SELECAO EXTERNA MENU/SAIR
 		}	
 	}
-	funcao f_destino()
+	funcao f_destino() //PROCURADOR DE CADASTRO DE VIAGEM
 	{
 		limpa()
-		inteiro i_finDES
-		cadeia f_cidade
-		logico finder=falso
+		inteiro i_finDES //CONTADOR DO PROCURADOR DE VIAGEM
+		cadeia f_cidade //CIDADE A SER ENCONTRADA
+		logico finder=falso //LOGICO ATIVADO AO ENCONTRAR A CIDADE
 		escreva("##################################################")
 		escreva("\n\n")
 		escreva("Cidade destino: ")
-		leia(f_cidade)
+		leia(f_cidade) 
 		escreva("\n")
 		i_finDES=i_cadDES
-		para(i_finDES=0; i_finDES<2; i_finDES++)
+		para(i_finDES=0; i_finDES<10; i_finDES++)
 		{
 		 	se(d_cidade[i_finDES]==f_cidade)
 			{
 				escreva("Dados da viagem")
 				escreva("\n")
-				escreva("   DE ", o_cidade[i_finDES],", ", o_estado[i_finDES], " PARA ", d_cidade[i_finDES], ", ",d_estado[i_finDES])
-				escreva("\n")
+				escreva("   DE ", o_cidade[i_finDES],"-", o_estado[i_finDES], " PARA ", d_cidade[i_finDES], "-",d_estado[i_finDES])
+				escreva("\n") //DE (CIDADE-UF) PARA (CIDADE-UF)
 				escreva("   Esse e nossa ", i_finDES+1, "a viagem")
 				finder = verdadeiro
-				selecao2()
+				selecao2() //SELECAO EXTERNA MENU/SAIR
 			}
 		}
 		se(finder==falso)
 		{
 			escreva("VIAGEM NAO CADASTRADA")
-			selecao2()
+			selecao2()//SELECAO EXTERNA MENU/SAIR
 		}	
 	}
-	funcao selecao2()
+	funcao selecao2() //SELECAO EXTERNA 2 DAS OPCOES DO MENU
 	{
 		escreva("\n\n")
 		escreva("##################################################")
@@ -245,24 +244,24 @@ programa
 		leia(op2)
 		escolha(op2)
 		{
-			caso 1:
+			caso 1: //VOLTAR PARA O MENU
 			{
 				menu()	
 				pare
 			}	
-			caso 0:
+			caso 0: //ENCERRAR A APLICACAO
 			{
 				sair()	
 				pare
 			}
-			caso contrario:
+			caso contrario: //POR PRECAUCAO VOLTAR AO MENU
 			{
 				menu()	
 				pare
 			}
 		}
 	}
-	funcao sair()
+	funcao sair() //ENCERRA A APLICACAO COM MENSAGEM DE AGRADECIMENTO
 	{
 		limpa()
 		escreva("##################################################")
@@ -276,15 +275,3 @@ programa
 		escreva("##################################################")	
 	}
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 5448; 
- * @DOBRAMENTO-CODIGO = [16, 43, 104, 129, 160, 199, 230];
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {op, 4, 9, 2}-{nome, 7, 8, 4}-{d_cidade, 8, 34, 8};
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
