@@ -1,3 +1,5 @@
 {
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "livePreview.defaultPreviewPath": "/Entregas/Modulo_2/RECtour_PAGE/index.html",
+  "liveServer.settings.port": 5501
 }
