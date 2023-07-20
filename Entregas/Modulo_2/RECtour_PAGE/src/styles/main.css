@@ -1,10 +1,13 @@
-@font-face {
+@font-face 
+{
   font-family: Montserrat;
   src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
 }
-html, body
+html{background-color: #f8be8f;}
+body, body a, body a:hover
 {
   margin: 0;
-  font-family: Montserrat;  
-  background-color: #fd8524;
+  font-family: Montserrat;
+  text-decoration: none;
+  color: #000000;
 }
