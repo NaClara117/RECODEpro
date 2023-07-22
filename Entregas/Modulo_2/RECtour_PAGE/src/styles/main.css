@@ -1,13 +1,123 @@
-@font-face 
-{
+@font-face {
   font-family: Montserrat;
   src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
 }
-html{background-color: #f8be8f;}
-body, body a, body a:hover
-{
+
+:root {
+  background-color: #f8be8f;
+}
+
+body,
+body a,
+body a:hover {
   margin: 0;
   font-family: Montserrat;
   text-decoration: none;
   color: #000000;
+}
+
+header {
+  background-color: #ffffff;
+  border-radius: 0 0 3vw 3vw;
+  width: 95.2vw;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;}
+  header>.logo {
+  display: flex;
+  align-self: center;
+  text-align: right;
+  align-items: center;
+  justify-content: center;}
+    header>.logo>img {
+  width: calc((22/100)*100vw);
+  padding: auto 1vw;}
+  header>.nav_geral {
+  justify-content: space-between;}
+    header>.nav_geral>.info {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 1vh;}
+      header>.nav_geral>.info>span {
+  font-size: 1.75vw;
+  justify-content: space-between;
+  margin: 0 0.75vw;}
+        header>.nav_geral>.info>span>img {
+  height: 2.75vw;}
+      header>.nav_geral>.info>span.botao {
+  border: solid 0.25vw #f08330;
+  border-radius: 100vw;
+  display: flex;
+  align-items: center;
+  width: 10vw;
+  justify-content: space-evenly;}
+        header>.nav_geral>.info>span.botao>img {
+  height: 2.75vw;
+  padding: 0.3vw 0;}
+        header>.nav_geral>.info>span.botao>span {
+  font-size: 1.3vw;}
+    header>.nav_geral>.nav_interna {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;}
+      header>.nav_geral>.nav_interna>span {
+  font-size: 2.75vw;
+  justify-content: space-between;
+  margin: 0 1.2vw;}
+        header>.nav_geral>.nav_interna>span>a {
+  padding: 1vw 0.6vw 0.6vw 0.6vw;
+  display: flex;}
+        .atual {
+        background-color: #f8be8f;
+        border-radius: 2vw 2vw 0 0;
+        color: #ffffff;}
+main {
+  background-color: #ffffff;
+  border-radius: 3vw;
+  width: 95.2vw;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;}
+footer {
+  background-color: #ffffff;
+  border-radius: 3vw;
+  width: 95.2vw;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;}
+footer>.header_footer
+{
+  width: 95.2vw;
+  background-color: #f08330;
+  border-top: solid 0.5vh #000000;
+}
+footer>.header_footer>.titulo
+{
+  color:#000000;
+  font-size: 2.5vw;
+}
+footer>.header_footer>.titulo>img
+{
+  height: 2.5vw;
+  border-radius: 50vw;
+}
+footer>.header_footer>.redes_sociais2
+{
+  color: #ffffff;
+  font-size: 2vw;
+}
+footer>.header_footer>.redes_sociais2>span>img
+{
+  height: 2.5vw;
 }
