@@ -1,0 +1,11 @@
+main section
+{
+  padding: 2.5vw;
+}
+main span
+{
+  display: inline-block;
+  margin: 0;
+  padding: 0.25vh 1vw;
+}
+main h1{margin-bottom: 0.5vh;}

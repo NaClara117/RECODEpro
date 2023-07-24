@@ -1,0 +1,49 @@
+main>section
+{
+  padding: 2.5vw;
+  text-align: center;
+}
+h1, h2,h3
+{
+  text-indent: 0;
+  margin: 0;
+  text-align: left;
+}
+h1
+{
+  font-size: 7.5vh;
+}
+h2
+{
+  font-size: 5vh;
+  padding: 0 0 0 2.5vw;
+}
+h3
+{
+  font-size: 3.5vh;
+  text-align: center;
+  padding-top: 2.5vw;
+}
+main>section>span
+{
+  display: inline-block;
+  text-indent: 2.5vw;
+  padding: 0 0 0 2.5vw;
+  font-size: 3.5vh;
+  text-align: justify;
+  text-align: left;
+}
+main>section>article>span
+{
+  display: inline-block;
+  text-indent: 2.5vw;
+  padding: 0 0 0 5vw;
+  font-size: 3.5vh;
+  text-align: justify;
+  text-align: left;
+}
+section>img
+{
+  margin: 2vh 2vh;
+  width: 100vh;
+}
