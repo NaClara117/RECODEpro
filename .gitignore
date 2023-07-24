@@ -1,18 +1,17 @@
 # Ignore arquivos especificados
 # ex.: config.json
-.vscode
 package.json
-
+package-lock.json
 # Ignore todos os arquivos com a extensão especificada.
 # ex.: *.json
-
+.vscode
 # Adicione uma exceção para não ignorar um arquivo com o nome especificado
 # ex.: !package.json
 
 # Ignore todos os arquivos na subpasta 
 # ex.:logs/
 node_modules
-
+.vscode
 # Ignora um arquivo com o nome especificado, dentro de determinadas subpasta
 # ex.: /logs/test.logfile
 
