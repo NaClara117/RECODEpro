@@ -113,9 +113,9 @@ aside
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #000000;
-  width: 3.5vw;
-  height: 25vw;
-  border-radius: 2vw 0 0 2vw;
+  width: 7.5vh;
+  height: 37.5vh;
+  border-radius: 4vh 0 0 4vh;
   float: right;
   position:fixed;
   z-index: 1000;
@@ -125,10 +125,11 @@ aside
 aside>a
 {
   margin: auto;
+  display: flex;
 }
 aside>a>img
 {
-  height: 2.5vw;
+  height: 4vh;
 }
 main {
   background-color: #ffffff;
