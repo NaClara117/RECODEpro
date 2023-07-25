@@ -178,7 +178,7 @@ footer>.header_footer>.redes_sociais2 {
   padding: 0.5vw 1vw;
 }
 
-footer>.header_footer>.redes_sociais2>span>img {
+footer>.header_footer>.redes_sociais2>span>a>img {
   height: 2.5vw;
 }
 footer>.main_footer

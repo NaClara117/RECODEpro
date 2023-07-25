@@ -1,0 +1,21 @@
+main
+{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main>div
+{
+  padding: 2vw;
+}
+main>div>img
+{
+  height: 53vh;
+  padding-bottom: 1.5vw;
+}
+main>div>span
+{
+  font-size: 1.5vw;
+}
