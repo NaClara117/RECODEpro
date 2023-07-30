@@ -1,0 +1,48 @@
+html
+{
+  background-color: black;
+}
+body
+{
+  background-color: lightgrey;
+  display: flex;
+  height: 600px;
+  width: 1100px;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+#div22
+{
+  display:flex;
+}
+.div_1
+{
+  height: 500px;
+  width: 333px;
+  background-color: lightcoral;
+}
+.div_2
+{
+  height: 250px;
+  width: 666px;
+  background-color: lightgreen;
+}
+.div_3
+{
+  height: 250px;
+  width: 333px;
+  background-color: violet;
+}
+
+.div_4
+{
+  height: 125px;
+  width: 333px;
+  background-color: blueviolet;
+}.div_5
+{
+  height: 125px;
+  width: 333px;
+  background-color: royalblue;
+}
