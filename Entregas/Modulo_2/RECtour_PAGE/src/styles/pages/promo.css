@@ -1,0 +1,55 @@
+main.promo p
+{
+  margin: 0;
+  font-size: 1.5vw;
+  text-align: justify;
+}
+main.promo small
+{
+  font-size: 1vw;
+}
+main.promo big
+{
+  font-size:3vw;
+}
+main.promo
+{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+main.promo div.titulo
+{
+  display: flex;
+  text-align: center;
+  align-items:end;
+  justify-content:end;
+  background-color: #f08330;
+  padding: 3vh 0 0 0;
+  margin-bottom: 15px;
+}
+main.promo div.linha
+{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2vh;
+}
+main.promo div.linha>div.cartao
+{
+  border: solid #f08330 5px;
+  width: 30%;
+}
+main.promo div.linha>div.cartao>div.img1>img
+{
+  width: 100%;
+}
+main.promo div.linha>div.cartao>div.texto1
+{
+  padding: 0.5vw 1vw 1vw 1vw;
+}
+main.promo div.linha>div.cartao>div.texto1>p.titulo1
+{
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 5px;
+}

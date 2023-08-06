@@ -21,6 +21,10 @@ body
 body a, body a:hover {
   text-decoration: none;
 }
+a:hover
+{
+  color: #f08330;
+}
 
 header {
   background-color: #ffffff;
