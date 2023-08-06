@@ -1,0 +1,9 @@
+main.destinos
+{
+  margin: 0;
+  padding: 0;
+}
+main.destinos div
+{
+  display: flex;
+}
